@@ -1,0 +1,26 @@
+%body
+  = render "devise/shared/side_bar"
+  
+  -# %header
+  -#   .chat-side
+  -#     .side-header
+  -#       .side-header__box
+  -#         .side-header__box__left
+  -#           %h1.user-name 
+  -#             = current_user.name
+  -#         .side-header__box__right
+  -#           %ul
+  -#             %li.new-group
+  -#               = link_to new_group_path do
+  -#                 = fa_icon 'edit', class: 'icon'
+  -#             %li.edit-user
+  -#               = link_to edit_user_path(current_user) do
+  -#                 = fa_icon 'cog', class: 'icon'
+  -#     .side_groups
+  -#       .group-content
+  -#         .side_group-name
+  -#           %h2
+  -#             = @group.name
+  -#         .side_group-message
+  -#           %p
+  -#             = @message.content
