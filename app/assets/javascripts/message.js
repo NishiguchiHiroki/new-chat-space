@@ -1,9 +1,9 @@
 $(function(){
 
   function buildMessage(message){
-    if ( message.image ) {
+    var image = message.image ? `<img src="${message.image}">` : "";
       var html =
-       `<div class="message" data-message-id=${message.id}>
+       `<div class="message" data-message-id="${message.id}">
           <div class="upper-message">
             <div class="chat_user-name">
               ${message.user_name}
@@ -17,29 +17,10 @@ $(function(){
               ${message.content}
             </p>
           </div>
-          <img src=${message.image} >
+              ${image}
         </div>`
       return html;
-    } else {
-      var html =
-       `<div class="message" data-message-id=${message.id}>
-          <div class="upper-message">
-            <div class="chat_user-name">
-              ${message.user_name}
-            </div>
-            <div class="day-time">
-              ${message.date}
-            </div>
-          </div>
-          <div class="chat-message">
-            <p class="lower-message__content">
-              ${message.content}
-            </p>
-          </div>
-        </div>`
-    return html;
-  }
-}
+     }
 
   $('.new_message').on('submit', function(e){
     e.preventDefault();
@@ -65,4 +46,29 @@ $(function(){
     });
     return false;
   });
-});
+
+  var reloadMessages = function () {
+    if (window.location.href.match(/\/groups\/\d+\/messages/)){
+      var last_message_id = $('.message:last').data("message-id");
+      $.ajax({ 
+        url: "api/messages",
+        type: 'get',
+        dataType: 'json',
+        data: {last_id: last_message_id}
+      })
+      .done(function (messages) {
+        console.log(messages)
+        var insertHTML = '';
+        messages.forEach(function (message) {
+          insertHTML = buildMessage(message);
+          $('.chat-content').append(insertHTML);
+        })
+        $('.chat-content').animate({scrollTop: $('.chat-content')[0].scrollHeight}, 'fast');
+      })
+      .fail(function () {
+        alert('自動更新に失敗しました');
+      });
+    }
+  };
+  setInterval(reloadMessages, 10000);
+  });
