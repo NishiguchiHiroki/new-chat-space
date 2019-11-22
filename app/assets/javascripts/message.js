@@ -57,7 +57,6 @@ $(function(){
         data: {last_id: last_message_id}
       })
       .done(function (messages) {
-        console.log(messages)
         var insertHTML = '';
         messages.forEach(function (message) {
           insertHTML = buildMessage(message);
@@ -70,5 +69,5 @@ $(function(){
       });
     }
   };
-  setInterval(reloadMessages, 10000);
+  setInterval(reloadMessages, 5000);
   });
