@@ -51,4 +51,7 @@ before_fork do |server, worker|
 end
 
 after_fork do |_server, _worker|
-  defined?(A
+
+  defined?(ActiveRecord::Base) && ActiveRecord::Base.establish_connection
+end
+
