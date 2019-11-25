@@ -13,8 +13,9 @@
 }
 
 .side-header {
-  max-width:300px;
-  height:80px;
+  position: fixed;
+  width:300px;
+  height:100px;
   padding:0 20px;
   box-sizing: border-box;
   background-color:#253141;
@@ -27,7 +28,7 @@
  
   h1 {
     font-weight: bold;
-    line-height: 80px;
+    line-height: 100px;
   }
 
   li {
@@ -43,14 +44,17 @@
 
 .side_groups {
   display: block;
+  margin-top:100px;
+  padding-top:20px;
   height:100%;
   box-sizing: border-box;
   background-color:#2f3e51;
 }
 
 .group-content {
-  padding:20px 20px 40px 20px;
+  padding:0 20px 40px 20px;
   background-color:#2f3e51;
+
 }
 
 .side_group-name {
