@@ -6,9 +6,8 @@
       .chat-member
         %p Members: 
         .chat-member_name
-          - @group.users.each_with_index do |user,index|
+          - @group.users.each do |user,index|
             %h3 
-              %span #{index + 1}, 
               = user.name
     .chat_edit
       = link_to edit_group_path(@group) do
@@ -16,9 +15,10 @@
   .chat-content
     = render @messages
   .form-action
-    = form_for([@group, @message],id: "new-comment",class: "new-try") do |f|
-      = f.text_field :content, class: "chat_form-text", placeholder: "type a message"
-      = f.label :image, class: 'form__mask__image' do
-        = icon('fa', 'image', class: 'fa-image')
-        = f.file_field :image, class: 'file-input'
-      = f.submit 'Send', class: "chat-post"
+    = form_for([@group, @message],id: "new-comment") do |f|
+      .form-position
+        = f.text_field :content, class: "chat_form-text", placeholder: "type a message"
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fa', 'image', class: 'fa-image')
+          = f.file_field :image, class: 'file-input'
+      = f.submit 'Send', class: "submit_btn"

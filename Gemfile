@@ -64,7 +64,7 @@ gem "haml-rails", ">= 1.0", '<= 2.0.1'
 
 gem "font-awesome-rails" 
 gem 'font-awesome-sass'
-
+gem 'kaminari'
 gem 'devise'
 
 gem 'carrierwave'

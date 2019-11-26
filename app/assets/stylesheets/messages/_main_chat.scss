@@ -10,7 +10,7 @@
   justify-content: space-between;
   width:calc(100% - 300px);
   height:100px;
-  border-bottom:1px solid #999;
+  border-bottom:1px solid #eee;
   box-sizing: border-box;
   z-index: 10;
   background-color: white;
@@ -18,9 +18,8 @@
 
 .chat_group-name {
   h2 {
-    padding:30px 0 0 40px;
+    padding:35px 0 15px 40px;
     font-size:20px;
-    padding:35px 0 0 40px;
     color:#333;
   }
 }
@@ -28,18 +27,14 @@
 .chat-member {
   display: flex;
   align-items: center;
-
-  p {
-    margin-left:40px;
-    font-size: 12px;
-    margin:0 20px 0 40px;
-    font-size: 14px;
-    color:#999;
-  }
+  margin-left:40px;
+  font-size: 12px;
+  margin:0 20px 0 40px;
+  color:#999;
 
   &_name h3{
     color:gray;
-    padding-right:20px;
+    margin-left:5px;
     float:left;
     font-size:12px;
  }
@@ -47,17 +42,15 @@
 
 
 .chat_edit {
-  padding:35px 40px 0 20px;
+  margin-top:30px;
+  position: absolute;
+  right:40px;
   p {
-    padding:5px 10px;
-    font-size:18px;
+    height:40px;
+    line-height:40px;
+    padding:0 20px;
     border:1px solid rgb(0, 195, 255);
     color:rgb(0, 195, 255);
-
-    &:hover {
-      background-color: rgb(0, 195, 255);
-      color:#fff;
-    }
   }
 }
 
@@ -78,20 +71,17 @@
   padding:46px 10px 10px 0;
   height:16px;
   float:left;
-  h3 {
-    font-size:16px;
-    font-weight: bold;
-    color:#434A54;
-  }
+  font-size:16px;
+  font-weight: bold;
+  color:#434A54;
 }
 
 .day-time {
   padding-top:46px;
   height:12px;
-  p {
-    font-size: 12px;
-    color:#999;
-  }
+  font-size: 12px;
+  font-weight: normal;
+  color:#999;
 }
 
 .chat-message {
@@ -112,22 +102,37 @@
   background-color:#ddd;
 }
 
-.chat_form-text {
+.new_message {
+  width:calc(100% - 300px);
   position: relative;
-  float:left;
-  width:800px;
+.form-position {
+  position: absolute;
+  top:0;
+  left:0;
+.chat_form-text {
+  width:780px;
   height:50px;
   box-sizing: border-box;
-  margin-right:15px;
-  padding-left:10px;
-  font-family: FontAwesome;
 }
-
 .fa-image {
-  display: inline-block;
   position: absolute;
-  top:35px;
-  right:500px;
+  top:14px;
+  right:20px;
+  font-size:20px;
+}
+}
+.submit_btn{
+  position: absolute;
+  height:50px;
+  top:0;
+  right:0;
+  color:#fff;
+  border-style:none;
+  background-color: #38aef0;
+  border:1px solid#38aef0;
+  padding:0 30px;
+  margin-left:15px;
+}
 }
 
 .file-input {
