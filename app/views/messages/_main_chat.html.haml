@@ -14,11 +14,13 @@
         %p Edit
   .chat-content
     = render @messages
-  .form-action
+  .form
     = form_for([@group, @message],id: "new-comment") do |f|
-      .form-position
-        = f.text_field :content, class: "chat_form-text", placeholder: "type a message"
-        = f.label :image, class: 'form__mask__image' do
-          = icon('fa', 'image', class: 'fa-image')
-          = f.file_field :image, class: 'file-input'
-      = f.submit 'Send', class: "submit_btn"
+      .form-action
+        .form-position
+          = f.text_field :content, class: "chat_form-text", placeholder: "type a message"
+          = f.label :image, class: 'form__mask__image' do
+            = icon('fa', 'image', class: 'fa-image')
+            = f.file_field :image, class: 'file-input'
+        .fore-submit
+          = f.submit 'Send', class: "submit_btn"
