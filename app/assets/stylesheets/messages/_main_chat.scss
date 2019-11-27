@@ -60,17 +60,17 @@
   height: calc(100vh - 190px);
   background-color: #fafafa;
   margin:100px 0 0px 0;
+  padding-top:46px;
   padding-bottom:40px;
   overflow: scroll;
 }
 .message {
-  padding:0 0 20px 40px;
-  margin-top:-20px;
+  padding:0 0 40px 40px;
   background-color: #fafafa;
 }
 
 .chat_user-name {
-  padding:46px 10px 10px 0;
+  padding:0 10px 10px 0;
   height:16px;
   float:left;
   font-size:16px;
@@ -79,7 +79,6 @@
 }
 
 .day-time {
-  padding-top:46px;
   height:12px;
   font-size: 12px;
   font-weight: normal;

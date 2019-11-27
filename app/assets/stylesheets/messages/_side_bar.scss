@@ -28,15 +28,17 @@
   h1 {
     font-weight: bold;
     line-height: 100px;
+    font-size:16px;
   }
 
   li {
     float:left;
     i {
       color:#fff;
+      font-size:16px;
     }
     &:nth-child(2){
-      margin-left: 10px;
+      margin-left: 5px;
     }
   }
 }
@@ -60,14 +62,12 @@
 .side_group-name {
   h2 {
     font-size: 15px;
-    font-weight: bold;
     color:#fff;
   }
 }
 .side_group-message {
   p {
     font-size: 11px;
-    font-weight: bold;
     padding-top:10px;
     color:#fff;
   }
