@@ -7,7 +7,6 @@
 }
 .chat-header {
   display: flex;
-  position: fixed;
   justify-content: space-between;
   width:calc(100% - 300px);
   height:100px;
@@ -59,15 +58,19 @@
   width:100%;
   height: calc(100vh - 190px);
   background-color: #fafafa;
-  margin:100px 0 0px 0;
   padding-top:46px;
   padding-bottom:46px;
   overflow: scroll;
 }
 .message {
   height:55px;
-  padding:0 0 40px 40px;
+  padding:0 0 42px 40px;
   background-color: #fafafa;
+}
+
+.upper-message {
+  margin-bottom:10px;
+  height:18px;
 }
 
 .chat_user-name {
@@ -91,6 +94,7 @@
   p {
     font-size:14px;
     color:#434A54;
+    margin-bottom:10px;
   }
 }
 
