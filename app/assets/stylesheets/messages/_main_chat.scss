@@ -61,17 +61,18 @@
   background-color: #fafafa;
   margin:100px 0 0px 0;
   padding-top:46px;
-  padding-bottom:40px;
+  padding-bottom:46px;
   overflow: scroll;
 }
 .message {
+  height:55px;
   padding:0 0 40px 40px;
   background-color: #fafafa;
 }
 
 .chat_user-name {
   padding:0 10px 10px 0;
-  height:16px;
+  height:18px;
   float:left;
   font-size:16px;
   font-weight: bold;
