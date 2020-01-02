@@ -57,14 +57,12 @@ $(function(){
         data: {last_id: last_message_id}
       })
       .done(function(messages){
-        console.log(messages)
         var insertHTML = '';
           messages.forEach(function(message){
           insertHTML = buildMessage(message)
           $('.chat-content').append(insertHTML);
           $('.chat-content').animate({scrollTop: $('.chat-content')[0].scrollHeight}, 'fast');   
         })
-
       })
       .fail(function() {
         alert('自動更新に失敗しました');
